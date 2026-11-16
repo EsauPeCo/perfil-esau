@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Esaú Pérez, desarrollador de software en Culiacán</title>
+  <meta name="description" content="Perfil de José Esaú Pérez Coronel, estudiante de Ingeniería en Desarrollo de Software que construye web, apps móviles y videojuegos desde Culiacán, Sinaloa.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="wordmark" href="#inicio" aria-label="Esaú Pérez, inicio">Esaú Pérez</a>
+      <nav aria-label="Secciones">
+        <ul class="nav__links">
+          <li><a href="#que-hago">Qué hago</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a class="nav__action" href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" id="inicio">
+      <div class="container hero__inner">
+        <h1 class="hero__head">Hola, soy Esaú.</h1>
+        <div class="hero__foot">
+          <p class="hero__lead">Programo web, apps y videojuegos desde Culiacán, Sinaloa.</p>
+          <div class="hero__actions"><a class="hero__link" href="#proyectos">Empieza por mis proyectos</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="que-hago" aria-labelledby="que-hago-t">
+      <div class="container services__grid">
+        <h2 id="que-hago-t">Cuatro oficios, un mismo código</h2>
+        <dl class="rows">
+          <div class="row">
+            <dt>Web full stack</dt>
+            <dd>Angular, Astro y Laravel, del formulario a la base de datos.</dd>
+          </div>
+          <div class="row">
+            <dt>Apps móviles</dt>
+            <dd>Kotlin en Android, Swift y UIKit en iOS.</dd>
+          </div>
+          <div class="row">
+            <dt>Agentes de IA</dt>
+            <dd>Integro agentes de inteligencia artificial en productos web.</dd>
+          </div>
+          <div class="row">
+            <dt>Videojuegos</dt>
+            <dd>Diseño, modelado low-poly y sonido para prototipos.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="case" aria-labelledby="caso-t">
+      <div class="container">
+        <div class="case__head">
+          <h2 id="caso-t">Sol de Obsidiana, un JRPG mexica</h2>
+          <p class="case__stand">Diseñé el mundo, el monolito, la interfaz y la música del primer puzzle.</p>
+        </div>
+        <figure class="case__lead">
+          <div class="frame frame--wide" data-slot="caso-hud" data-alt="Interfaz del juego en la entrada del primer calabozo">
+            <img src="img/sol-obsidiana-hud.png" width="1600" height="900" alt="Interfaz de Sol de Obsidiana: Ixél frente al Monolito de Tonalli, con vida, mapa y objetivo en pantalla" loading="lazy" decoding="async">
+          </div>
+          <figcaption>La entrada al primer calabozo: Ixél empuja el monolito con su tonalli de tierra.</figcaption>
+        </figure>
+        <div class="case__pair">
+          <figure>
+            <div class="frame frame--menu" data-slot="caso-menu" data-alt="Menú principal y opciones de accesibilidad del juego">
+              <img src="img/sol-obsidiana-menu.png" width="1600" height="900" alt="Menú principal de Sol de Obsidiana con las opciones de accesibilidad abiertas" loading="lazy" decoding="async">
+            </div>
+            <figcaption>Menú principal con opciones de accesibilidad.</figcaption>
+          </figure>
+          <figure>
+            <div class="frame frame--tall" data-slot="caso-monolito" data-alt="Render del monolito en Blender">
+              <img src="img/monolito-tonalli-render.png" width="1600" height="900" alt="Render del Monolito de Tonalli hecho en Blender" loading="lazy" decoding="async">
+            </div>
+            <figcaption>El monolito en Blender, 108 triángulos.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects" id="proyectos" aria-labelledby="proyectos-t">
+      <div class="container">
+        <div class="projects__head">
+          <h2 id="proyectos-t">Lo que he construido</h2>
+          <div class="filter" role="group" aria-label="Filtrar proyectos" hidden>
+            <button type="button" class="filter__btn" data-filter="todos" aria-pressed="true">Todos</button>
+            <button type="button" class="filter__btn" data-filter="web" aria-pressed="false">Web</button>
+            <button type="button" class="filter__btn" data-filter="movil" aria-pressed="false">Móvil</button>
+            <button type="button" class="filter__btn" data-filter="juegos" aria-pressed="false">Juegos</button>
+          </div>
+        </div>
+        <p class="projects__count" role="status" aria-live="polite"></p>
+        <table class="index">
+          <thead>
+            <tr><th scope="col">Proyecto</th><th scope="col">Qué es</th><th scope="col">Herramientas</th></tr>
+          </thead>
+          <tbody>
+            <tr data-cat="juegos"><th scope="row">Sol de Obsidiana</th><td>Diseño de un JRPG y prototipo visual y sonoro</td><td>Blender, Krita, LMMS</td></tr>
+            <tr data-cat="web"><th scope="row">Landing pages locales</th><td>Sitios para negocios de Culiacán</td><td>Astro, Tailwind</td></tr>
+            <tr data-cat="movil"><th scope="row">ComidasMX</th><td>Catálogo de restaurantes y platillos</td><td>Kotlin, SQLite</td></tr>
+            <tr data-cat="movil"><th scope="row">¿Qué personaje eres?</th><td>Cuestionario de personalidad para iPhone</td><td>Swift, UIKit</td></tr>
+            <tr data-cat="web"><th scope="row">CRUD de productos</th><td>Inventario con búsqueda, filtros y paginación</td><td>Laravel, MariaDB</td></tr>
+            <tr data-cat="web"><th scope="row">Cinema UVEG</th><td>Cartelera de películas con su ficha de detalle</td><td>Angular</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="place" aria-labelledby="donde-t">
+      <div class="container place__grid">
+        <h2 id="donde-t">Desde Culiacán, en línea</h2>
+        <dl class="place__facts">
+          <div><dt>Ciudad</dt><dd>Culiacán, Sinaloa</dd></div>
+          <div><dt>Carrera</dt><dd>Ingeniería en Desarrollo de Software, UVEG</dd></div>
+          <div><dt>Estadía</dt><dd>Web full stack e IA, octubre 2026 a mayo 2027</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="close" id="contacto">
+    <div class="container close__inner">
+      <p class="close__line">Gracias por leer. Si tienes un proyecto, hablemos.</p>
+      <ul class="close__links">
+        <li><a href="https://github.com/EsauPeCo">GitHub, EsauPeCo</a></li>
+        <li><a href="https://esauperez.com">esauperez.com</a></li>
+      </ul>
+      <p class="close__sign">Esaú</p>
+      <p class="colophon">Servida con Nginx en /perfil. © <span data-year>2026</span> José Esaú Pérez Coronel.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
