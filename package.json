@@ -1,6 +1,6 @@
 {
   "name": "perfil-esau",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Página personal de presentación de José Esaú Pérez Coronel, empaquetada y servida con Nginx en http://localhost/perfil",
   "private": true,
   "scripts": {

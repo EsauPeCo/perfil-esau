@@ -14,8 +14,11 @@ echo "==> Verificando la suma SHA-256 del paquete"
 (cd "$RAIZ/release" && sha256sum -c --ignore-missing "perfil-esau-v$VERSION.sha256")
 
 echo "==> Publicando v$VERSION en $DESTINO"
-rm -rf "$DESTINO"
+# Se vacía el contenido sin borrar la carpeta: Docker monta la carpeta por su
+# inodo, y si se borra y se vuelve a crear, el contenedor sigue viendo la vieja
+# (vacía) y Nginx responde 403/404.
 mkdir -p "$DESTINO"
+find "$DESTINO" -mindepth 1 -delete
 tar -xzf "$PAQUETE" -C "$DESTINO"
 
 echo "==> Validando la configuración y levantando Nginx"

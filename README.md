@@ -51,7 +51,7 @@ npm run build
 3. **Imágenes:** ImageMagick reduce cada PNG a un máximo de 1600 px de ancho, borra los metadatos y lo convierte a WebP con calidad 80.
 4. **HTML:** cambia las rutas a los archivos optimizados y lo minifica con html-minifier-terser.
 
-Resultado de la versión 1.0.0:
+Resultado de la versión 1.0.1:
 
 | Archivo | Original | Optimizado | Ahorro |
 | --- | ---: | ---: | ---: |
@@ -72,17 +72,22 @@ npm run package
 
 Genera en `release/` el paquete listo para subir al servidor, con la versión tomada de `package.json`:
 
-- `perfil-esau-v1.0.0.tar.gz`
-- `perfil-esau-v1.0.0.zip`
-- `perfil-esau-v1.0.0.sha256` (sumas para verificar que el paquete llegó completo)
+- `perfil-esau-v1.0.1.tar.gz`
+- `perfil-esau-v1.0.1.zip`
+- `perfil-esau-v1.0.1.sha256` (sumas para verificar que el paquete llegó completo)
 
-Los paquetes se publican como archivos de la [versión v1.0.0](../../releases/tag/v1.0.0) del repositorio, por eso `release/` no se versiona.
+Los paquetes se publican como archivos de cada versión en [Releases](../../releases) del repositorio, por eso `release/` no se versiona.
 
 ## 3. Versionamiento
 
 - Un commit por cada cambio, con el formato `tipo: descripción` (`feat`, `style`, `build`, `fix`, `docs`, `chore`, `assets`).
 - La versión sigue el versionado semántico (`MAYOR.MENOR.PARCHE`) en `package.json`.
 - Cada entrega se marca con una etiqueta anotada (`git tag -a v1.0.0`) y una *release* de GitHub que lleva los paquetes.
+
+| Versión | Cambio |
+| --- | --- |
+| v1.0.0 | Primera versión: sitio optimizado, empaquetado y Server Block de Nginx |
+| v1.0.1 | `deploy.sh` vacía la carpeta publicada en lugar de borrarla, para que el contenedor no pierda el montaje |
 
 ```bash
 git log --oneline
