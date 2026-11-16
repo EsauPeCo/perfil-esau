@@ -4,7 +4,9 @@ services:
     image: nginx:1.27.3-alpine
     container_name: perfil-nginx
     ports:
-      - "80:80"            # puerto del equipo : puerto del contenedor
+      # IP:puerto del equipo : puerto del contenedor. Solo 127.0.0.1, para que
+      # el sitio se vea en http://localhost y no quede abierto a la red local.
+      - "127.0.0.1:80:80"
     volumes:
       # Server Block propio en lugar del default.conf de la imagen
       - ./nginx/perfil.conf:/etc/nginx/conf.d/default.conf:ro

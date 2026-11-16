@@ -109,7 +109,9 @@ npm run deploy
 | Dónde | Puerto |
 | --- | --- |
 | Nginx dentro del contenedor (`listen 80;` y `listen [::]:80;`) | 80 |
-| Equipo anfitrión (`ports: "80:80"` en docker-compose.yml) | 80 |
+| Equipo anfitrión, solo en 127.0.0.1 (`ports: "127.0.0.1:80:80"` en docker-compose.yml) | 80 |
+
+El puerto se publica solo en la interfaz local (127.0.0.1), así que el sitio no es accesible desde otros equipos de la red.
 
 ### Mapeo de directorios
 
