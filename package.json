@@ -1,0 +1,17 @@
+{
+  "name": "perfil-esau",
+  "version": "1.0.0",
+  "description": "Página personal de presentación de José Esaú Pérez Coronel, empaquetada y servida con Nginx en http://localhost/perfil",
+  "private": true,
+  "scripts": {
+    "build": "bash scripts/build.sh",
+    "package": "bash scripts/package.sh",
+    "release": "bash scripts/build.sh && bash scripts/package.sh",
+    "deploy": "bash scripts/deploy.sh"
+  },
+  "devDependencies": {
+    "esbuild": "0.24.2",
+    "html-minifier-terser": "7.2.0"
+  },
+  "license": "MIT"
+}

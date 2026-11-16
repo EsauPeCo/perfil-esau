@@ -1,0 +1,5 @@
+node_modules/
+release/
+servidor/
+.hallmark/
+src/.hallmark/
